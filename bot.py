@@ -25,6 +25,13 @@ def func01(mensagem):
 def func02(mensagem):
   bot.reply_to(mensagem, "https://www.youtube.com/@lhrpp")
 ###########################################################################
+###########################################################################
+@bot.message_handler(commands=["4"])
+@bot.message_handler(commands=["github"])
+def func02(mensagem):
+  bot.reply_to(mensagem, "https://github.com/lhrp")
+###########################################################################
+
 
 def verificar(mensagem):
   return True
@@ -36,6 +43,7 @@ def responder(mensagem):
      Linkedin (/1 ou /linkedin)
      Twitch (/2 ou /twitch)
      YouTube (/3 ou /youtube)
+     Github (/4 ou /githun)
 Qualquer outro comando diferente dos mencionados acima não irá funcionar!!!"""
   bot.reply_to(mensagem, texto)
 
