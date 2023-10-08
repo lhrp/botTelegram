@@ -1,0 +1,5 @@
+#Ignorando Pastas
+venv/
+
+#ignorando Arquivos
+.env
