@@ -9,13 +9,21 @@ bot = telebot.TeleBot(CHAVE_API)
 
 ###########################################################################
 @bot.message_handler(commands=["1"])
+@bot.message_handler(commands=["linkedin"])
 def func01(mensagem):
-  bot.reply_to(mensagem, "Opção 01")
+  bot.reply_to(mensagem, "https://www.linkedin.com/in/leonardo-henrique-rangon-paulino")
+###########################################################################
+###########################################################################
+@bot.message_handler(commands=["2"])
+@bot.message_handler(commands=["twitch"])
+def func01(mensagem):
+  bot.reply_to(mensagem, "https://www.twitch.tv/lhrpp")
 ###########################################################################
 ###########################################################################
 @bot.message_handler(commands=["3"])
+@bot.message_handler(commands=["youtube"])
 def func02(mensagem):
-  bot.reply_to(mensagem, "Opção 03")
+  bot.reply_to(mensagem, "https://www.youtube.com/@lhrpp")
 ###########################################################################
 
 def verificar(mensagem):
@@ -25,9 +33,9 @@ def verificar(mensagem):
 def responder(mensagem):
   texto = """
     Escolha uma opção para continuar (Clique no item):
-     /1 Consulta Usuário
-     /2 Consultar CEP
-     /3 Consultar CNPJ
+     Linkedin (/1 ou /linkedin)
+     Twitch (/2 ou /twitch)
+     YouTube (/3 ou /youtube)
 Qualquer outro comando diferente dos mencionados acima não irá funcionar!!!"""
   bot.reply_to(mensagem, texto)
 
