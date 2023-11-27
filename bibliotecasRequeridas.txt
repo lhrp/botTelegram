@@ -1,0 +1,5 @@
+python -m venv venv
+
+python -m pip install --upgrade pip wheel
+
+pip install PyMySQL python-dotenv qrcode requests telebot
